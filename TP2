@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Emploi du temps</title>
+</head>
+<body>
+
+<body>
+ <h1 style="text-align :center" > Eploi Du temps _IAIL-S2 </h1><br>
+ <h2 style="text-align : right ">Anné Universitair 2025/2026  
+ </h2>
+  <img src="c:\Users\khali\Desktop\html\html1.jpg" width="300"  > 
+  <center><img src="c:\Users\khali\Desktop\html\html2.jpg" width="500" valign="top" ></center>
+    
+           
+<table style="margin :auto;" border="1" >
+   
+ <tr>
+    <th style="background-color:rgb(167, 166, 166);">  jours</th>
+    <th style="background-color:rgb(167, 166, 166);">9h - 10:30h </th>
+    <th style="background-color: rgb(167, 166, 166);"> 10:30h - 12h </th>
+    <th style="background-color: rgb(167, 166, 166);" >12h15 - 13h45</th>
+    <th style="background-color: rgb(167, 166, 166);" >13h45 - 15h15</th>
+    <th style="background-color: rgb(167, 166, 166);" >15h30 - 17h  </th>
+    <th style="background-color: rgb(167, 166, 166);" >17h  - 18h30</th>
+ </tr>
+
+ <tr>
+  <th>Lundi</th>
+  <td>Programmation Python 2 <br><a href="1.html">Prof M.Laraqui<br>Cours.Amphi A</td></a>
+  <td>Algorithmes et Programation C 2<br><a href="1.html">Cours-Prof H Oudani <br>Cours.Amphi A</td></a>
+  <td>   </td>
+  <td>Algorithmes C et Peogramation C2<br><span style="color: red;">Td/Tp Grp1 -Salle P2<br></span><a href="1.html">Prof H.Oudani</td></a>
+  <td>Proframation Python 2<br><span style="color: red;">TD/TP Salle P2 Grp 3</span><br><a href="1.html">Prof A.Elouarsi</td></a>
+  <td>Proframation Python 2<br><span style="color: red;">TD/TP Salle P2 Grp 2</span><br><a href="1.html">Prof A.Elouarsi</td></a>
+ </tr>
+
+ <tr>
+  <th>Mardi</th>
+  <td>Proframation Python 2<br><span style="color: red;">TD/TP Salle P2 Grp 1</span><br><a href="1.html">Prof A.Elouarsi</td></a>
+  <td></td>
+  <td>Digital Skills & Inteligence Artificielle <br>Cours-Anphi A<br><a href="1.html">Prof A. Elouardi</td></a>
+  <td>Digital Skills & Inteligence Artificielle <br>Tp/Td-Anphi A<br><a href="1.html">Prof A. Elouardi</td></a>
+  <td></td>
+  <td></td>
+  </tr>
+ <tr>
+  <th>Mercredi</th>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Algorithmes C et Peogramation C2<br><span style="color: red;">Td/Tp Grp2 -Salle P2<br></span><a href="1.html">Prof H.Oudani</td></a>
+  <td>Algèbre 2 <br>TD-Anphie A <br><a href="1.html">  Prof I.Boutaayamou</td></a>
+  <td>Analyse 2<br>TD-Anphie A<br><a href="1.html">Prof A.Hadri</td></a>
+ </tr>
+ <tr>
+  <th>Jeudi</th>
+  <td>Traitement Signal<br><a href="1.html"> Cours_Anphe A <br>Prof H.Azzahafi</td></a>
+  <td>Traitement Signal<br><a href="1.html">Cours_Anphe A <br>Prof H.Azzahafi</a> </td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+ <tr>
+  <th>Vendredi</th>
+  <td>Algèbre 2 <br><a href="1.html">Cours-Anphie A <br>Prof I.Boutaayamou</td></a>
+  <td>Analyse 2<br>Cours-Anphie A<br><a href="1.html">Prof A.Hadri</td></a>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+ </tr>
+ <tr>
+  <th>Samedi</th>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Programmation Web 1<br><a href="1.html"><span style="color: red;">TD/TP-Salle P2</span> <br>Prof A.Hakim</td></a>
+  <td>Programmation Web 1<br> Cours-Salle P1<br><a href="1.html">Prof K.Omari</a></td>
+  <td>Programmation Web 1<br><a href="1.html"><span style="color: red;">TD/TP-Salle P2</span> <br>Prof K.Omari</td></a>
+ </tr>
+</table>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <center><title> contacter le Professeur</title></center>
+</head>
+<body>
+       <center> <h1>
+        Envoyer un message au Professeur </h1></centre>
+    <form>
+       <style>label { 
+            font-size: 20px;
+            color: blue
+            ;}</style>
+        <label>
+            Nom:
+        </label><br>
+        <input type="nom" ><br><br>
+        <label>
+            Email:
+        </label><br>
+        <input type="email"><br><br>
+        <label>
+            Message:
+        </label><br>
+        <textarea name="message" rows="5" cols="30"></textarea><br><br>
+        <input type="submit" value="Envoyer"></center>
+    </form>    
+    
+</body>
+</html>
