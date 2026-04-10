@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="information">
+   <img src="c:\Users\khali\Downloads\Untitled design.png " > 
+    <h1>Aggni Khalid</h1>
+    <p>Email: khalidaggni@gmail.com    </p>
+    <p>Téléphone: 0627257095 </p>
+    <p> github:KhalidAGGNI   <p>  
+    <p class="descreption">Étudiant en informatique (S2),interesser par le developpement web est la programation</p>  
+ <hr>
+</div>
+ <div class="Ip"  > <h2>Informations personnelles</h2>
+       <p>Adresse:Ouarzazat        </p>
+     <p>Âge: 19 ans</p>
+     <p>Loisir: Gaming <BR>
+                éditing<br>
+                sport <br>rondoner </p>
+                     
+     <hr>
+ </div>
+   <div class="righttf"> 
+        <h2>Formation</h2>
+     
+         <p >Bac pc(2024/2025)</p>
+         <p>Études en informatique:S2      </p>
+         <p>éditing  </p>
+         <p>adob pr </p><hr>
+
+       <h2>Compétences</h2>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Python</p>
+            <p>Programation C  </p >
+            <hr>
+        <h2> Les Langue</h2>      
+            <p>Anglais</p>
+            <p>Français </p>
+            <p>Arab</p><hr>
+         <h2>Expériences</h2>
+  
+            <p>Stage en informatique</p>
+             <p>Projet personnel</p>
+            <p>Gérer les événements    </p><hr>
+
+            <h2> Les Qualités</h2>            
+       <p>travail en équipe</p>
+       <p>La Communication</p>
+       <p>Creative</p>
+       <p></p><hr>
+   </div> 
+
+
+</body>
+</html>
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #c2adad;
+margin: 0 ;
+padding: 0%;
+padding: auto;
+border-radius: 60%  ;
+font-display: swap;
+font-style: oblique;
+}
+.information { 
+width:80% ;
+margin:40px auto ;
+background:white ;
+padding: 20px    ;
+border-radius: 10px  ;
+box-shadow: 0 0 10px gray;
+text-decoration: currentColor;
+text-decoration: underline;
+
+ }
+h1{   color:#2c3e50 ;
+    text-align: center;
+    font-family: cursive;
+    font-weight: 600;
+    position: relative;
+    margin-top:-140px;
+
+    }
+p{              
+   text-decoration: double; 
+  text-align: center;
+  color: black;
+  padding-bottom:      5px  ; 
+ font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size:x-large ;
+ 
+}
+
+
+.Ip{ width:80% ;
+margin:40px auto ;
+background:white ;
+padding: 20px    ;
+border-radius: 10px  ;
+box-shadow: 0 0 10px gray;
+
+}
+
+
+.forma     { width:80% ;
+margin:40px auto ;
+background:white ;
+padding: 20px    ;
+border-radius: 10px  ;
+box-shadow: 0 0 10px rgb(141, 130, 130);
+
+} 
+ul{
+text-align: center;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-size: larger;
+}   
+h2{   color:#448ad1 ;
+    text-align: center;
+    text-decoration: underline;
+    
+
+}
+img{
+width: 300px ;
+height:autO  ;
+border-radius:50% ;
+box-shadow:rgb(14, 8, 8) ;
+position: relative;
+top:auto ;
+background-color: #1d0202;
+
+
+}
+.descreption {
+text-align: left;
+font-size:30;
+color: rgb(128, 123, 123);
+margin-top:5px ;
+}
+.Ip h2 {
+width: 20px;
+height: 34px;
+font-size: xx-large;
+}
+.Ip p {
+text-align: center;
+text-overflow: ellipsis;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: x-large;
+
+
+}
+.righttf{width:80% ;
+margin:40px auto ;
+background:white ;
+padding: 20px    ;
+border-radius: 10px  ;
+box-shadow: 0 0 10px gray;
+}
+.righttf h2{
+font-family: cursive;
+font-size: xx-large;
+text-align: left;
+}
+.righttf p {
+    text-align:center ;
+    text-emphasis-style: inherit;
+    text-decoration: double ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
