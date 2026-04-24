@@ -1,0 +1,83 @@
+// exercice 1 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lqnguage="javascript" src="exercice1.js"></script>
+</body>
+</html>
+//JS
+let a = prompt("Donne moi le premier nombre") ;
+let b = prompt("Donne moi le dexième nombre nombre") ;
+ 
+a = Number(a);
+b = Number(b);
+somme = a+b;
+diferrence = a - b ;
+produit = a*b ;
+quotient = a/b ; 
+console.log("somme",somme );
+console.log("diferrence",diferrence);
+console.log("produit",produit);
+console.log("quotient",quotient);
+//exercice 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lqnguage="javascript" src="exercice2.js"></script>
+</body>
+</html>
+let S=Math.floor(Math.random()*10)+1;
+let khtar;
+let compteur=0 ;
+do {
+    khtar = Number(prompt("devine un nombre entre 1 est 10")) ;
+    compteur++;
+        if(khtar>S){
+            alert("le nombre est plus petit");}
+         else if (khtar<S){
+            alert(" le nombre est plus grands");}
+         else {
+             alert("bravo,le nombre est trouver apres" + compteur + "teatatives");
+        }
+}while(khtar!=S);
+//exercice 3 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lqnguage="javascript" src="QUIZ.js"></script>
+</body>
+</html>
+var question =[["quelle est la capitale de la france ?","PARIS"],
+                ["5+2","7"],
+                ["combien de jours dans la semain","7"]];
+function lancerQuiz(){
+    var compteur=0 ;
+    for ( var i =0;i<question.length;i++){
+          var soual=question[i][0];
+          var jawabshih=question[i][1];
+          var reponseUtilisateur =prompt(soual);
+         if(reponseUtilisateur.toLowerCase()===jawabshih.toLowerCase()){
+            alert(" reponse just ") ;
+            compteur = compteur + 1 ;
+         }    else {alert("reponse fausse")}
+        }
+
+    alert("vous avais repondu correctement à " + compteur + "question sur " + question.length );
+
+}
+lancerQuiz();
