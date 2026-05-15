@@ -1,0 +1,264 @@
+/* EXERCICE 1 */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCIE1</title>
+</head>
+<body>
+ <script src="script.js"></script>
+</body>
+</html>
+//JS
+var div = document.createElement("div");
+var p = document.createElement("p");
+p.textContent ="ceci est un paragraph " ;
+div.appendChild(p);
+document.body.appendChild(div);
+p.textContent = "Le texte a été modifié";
+p.style.backgroundColor = "lightblue";
+p.style.textAlign = "center";
+div.addEventListener("click",function(){p.textContent="Un clic a été détecté"});
+/* EXERCICE 2 */
+<!DOCTYPE html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>List for you
+    </title>
+    <link rel="stylesheet" href="erercice.css">
+   </head>
+ <body>
+   <div class="card">
+   <div class="card-header">
+    <h1> List for you 
+    </h1>
+    <p>Gérez vos tâches facilement</p>
+    </div>
+    <div class="form-row">
+    <input type="text" id="taskInput" placeholder="Ajouter une nouvelle tâche…" />
+    <button id="addBtn">Ajouter</button>
+    </div>
+    <ul id="taskList">
+    <li id="emptyMsg">Aucune tâche pour l'instant 🎉</li>
+    </ul>
+    <div class="card-footer">
+    <span id="totalCount">0 tâche(s)</span>
+    <span id="doneCount">0 accomplie(s)</span>
+    </div>
+ </div>
+
+<script src="EXERCIS.js"></script>
+
+</body>
+</html>
+//JS
+
+const taskInput = document.getElementById('taskInput');
+const addBtn    = document.getElementById('addBtn');
+const taskList  = document.getElementById('taskList');
+const emptyMsg  = document.getElementById('emptyMsg');
+const totalCount = document.getElementById('totalCount');
+const doneCount  = document.getElementById('doneCount');
+ 
+function updateCounter() {
+  const items = taskList.querySelectorAll('.task-item');
+  const done  = taskList.querySelectorAll('.task-item.done');
+  totalCount.textContent = `${items.length} tâche(s)`;
+  doneCount.textContent  = `${done.length} accomplie(s)`;
+  }
+ 
+function toggleEmpty() {
+  const items = taskList.querySelectorAll('.task-item');
+  emptyMsg.style.display = items.length === 0 ? 'block' : 'none';
+  }
+ 
+function addTask() {
+  const text = taskInput.value.trim();
+  if (!text) {
+    taskInput.focus();
+    return;
+  } 
+const li = document.createElement('li');
+li.classList.add('task-item');
+const span = document.createElement('span');
+span.classList.add('task-text');
+span.textContent = text;
+const btnDone = document.createElement('button');
+btnDone.classList.add('btn-done');
+btnDone.textContent = ' Fait';
+const btnDelete = document.createElement('button');
+btnDelete.classList.add('btn-delete');
+btnDelete.textContent = ' Supprimer';
+li.appendChild(span);
+li.appendChild(btnDone);
+li.appendChild(btnDelete);
+taskList.appendChild(li);
+taskInput.value = '';
+taskInput.focus();
+btnDone.addEventListener('click', function () {
+li.classList.toggle('done');
+btnDone.textContent = li.classList.contains('done') ? '↩ Annuler' : ' Fait';
+  updateCounter();
+ });
+btnDelete.addEventListener('click', function () {
+  taskList.removeChild(li);
+  toggleEmpty();
+  updateCounter();
+    });
+toggleEmpty();
+updateCounter();
+} 
+addBtn.addEventListener('click', addTask);
+taskInput.addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') addTask();
+});
+//CSS
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #eef2f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;     
+    align-items: flex-start;
+    padding: 60px 16px;
+}
+ 
+
+.card {
+    background: #fff;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 30px rgba(197, 22, 22, 0.1);
+    width: 100%;
+    max-width: 520px;
+    overflow: hidden;
+}   
+.card-header {
+    background: linear-gradient(135deg, #2b3048, #764ba2);
+    padding: 28px 30px 22px;
+    color: #eeeeee;
+    }
+ 
+.card-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.card-header p {
+    font-size: .85rem;
+    opacity: .8;
+    margin-top: 4px;
+}
+ 
+.form-row {
+    display: flex;
+    gap: 8px;
+    padding: 22px 24px;
+    border-bottom: 1px solid #210202ba;
+}
+ 
+#taskInput {
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #9989aa;
+    border-radius: 8px;
+    font-size: .95rem;
+    outline: none;
+    transition: border-color .2s;
+}
+ 
+#taskInput:focus { border-color: #272a38; }
+ 
+#addBtn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .2s, transform .1s;
+}
+#taskList {
+    list-style: none;
+    padding: 12px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 60px;
+}
+ 
+#emptyMsg {
+    text-align: center;
+    color: #bbb;
+    font-size: .9rem;
+    padding: 20px 0;
+}
+ 
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9fb;
+    border: 1px solid #ebebeb;
+    border-radius: 10px;
+    padding: 12px 14px;
+    animation: slideIn .25s ease;
+} 
+.task-text {
+    flex: 1;
+    font-size: .95rem;
+    color: #333;
+    word-break: break-word;
+    transition: color .2s;
+}
+ 
+    
+.task-item.done .task-text {
+  text-decoration: line-through;
+   color: #aaa;
+}
+ 
+
+.btn-done, .btn-delete {
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity .2s, transform .1s;
+}
+ 
+.btn-done {
+    background: #d4edda;
+    color: #155724;
+}
+ 
+.task-item.done .btn-done {
+    background: #c3e6cb;
+    color: #0b5915;
+ }
+ 
+.btn-delete {
+    background: #f8d7da;
+    color: #721c24;
+}
+ 
+.btn-done:hover, .btn-delete:hover { opacity: .85; }
+.btn-done:active, .btn-delete:active { transform: scale(.95); }
+.card-footer {
+    padding: 12px 24px;
+    border-top: 1px solid #f0f0f0;
+    font-size: .8rem;
+    color: #888;
+    display: flex;
+    justify-content: space-between;
+}
